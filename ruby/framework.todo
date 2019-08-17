@@ -1,0 +1,11 @@
+OSX Setup:
+ ☐ Git
+ ☐ Zsh
+ ☐ atom
+ ☐ iterm2
+ ☐ rvm
+
+
+Ruby Framework:
+  ☐ Ability to write cucumber tests for UI
+  ☐ Ability to write RSpec tests for UI
