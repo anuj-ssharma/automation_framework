@@ -7,7 +7,7 @@ def start_capybara_browser(options)
   @capybara_driver = nil
 
   Capybara.configure do |config|
-    config.run_server = true
+    config.run_server = false
   end
 
   Capybara.default_driver = :selenium
