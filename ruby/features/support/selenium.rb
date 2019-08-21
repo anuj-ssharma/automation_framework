@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 HTTP_SERVER_PORT = ENV['PORT']
-URL = "http://#{ENV["URL"]}"
+URL = ENV["URL"]
 
 def start_capybara_browser(options)
   @capybara_driver = nil
@@ -22,7 +22,11 @@ def start_capybara_browser(options)
 
     yield if block_given?
 
-    @site = URL
+    if URL.nil?
+      raise Framework::InvalidUrl
+    else
+      @site = URL
+    end
     launch_app
   rescue EOFError, # webdriver crashed
          Selenium::WebDriver::Error::WebDriverError, # unable to connect to webdriver @ http://127.0.0.1:X after 20 seconds

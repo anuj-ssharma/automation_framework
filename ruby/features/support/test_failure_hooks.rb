@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
 After do |scenario|
-  driver = @capybara_driver.browser
-
   if scenario.failed? && @capybara_driver # no point capturing details if startup failed
     begin
       filename = "Failure-#{scenario.name.slice(0..150).gsub(%r(/['\/\000£$]/), '_').gsub(/\s/, '_')}-#{Time.now.to_i}"
