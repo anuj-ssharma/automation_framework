@@ -1,0 +1,8 @@
+# frozen_string_literal: true
+
+source 'https://rubygems.org'
+
+gem 'selenium-webdriver', '~>3.142.3'
+gem 'capybara'
+gem 'site_prism', '~>3.4'
+gem 'cucumber', '~>3.1'
