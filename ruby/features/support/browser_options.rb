@@ -31,7 +31,6 @@ def chrome_options(mobile_web)
     browser_options.add_argument(arg)
   end if HEADLESS
 
-  # browser_options.add_argument("--user-agent=#{mobile_useragent}") if mobile_web
   browser_options.add_argument("--no-sandbox")
   browser_options.add_argument("--no-zygote")
   # browser_options.add_argument("--log-path=#{webdriver_logfile_path}")
