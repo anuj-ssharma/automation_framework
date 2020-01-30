@@ -1,0 +1,11 @@
+require 'cql'
+
+directory = CukeModeler::Directory.new(".")
+repo =  CQL::Repository.new(directory)
+
+tests = repo.query  do
+  select name
+  from scenario
+end
+
+puts "Total Scenarios : #{tests.count}"
